@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card__image{
+            background-color: #a78bfa;
+        }
+    </style>
+    <link rel="stylesheet" href="/css/style2.css">
+</head>
+<body>
+<!-- From Uiverse.io by SelfMadeSystem --> 
+<div class="nav">
+  <div class="container">
+    <a href="/" class="btn">Home</a>
+    <a href="/listings" class="btn"> allListings</a>
+ <a href="/listings/new" class="btn">Add new listing</a>
+    
+    <svg
+      class="outline"
+      overflow="visible"
+      width="400"
+      height="60"
+      viewBox="0 0 400 60"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+    </svg>
+  </div>
+</div>
+
+    
+    
+     <% for(listing of allListings){ %>
+        <a href="/listings/<%= listing._id %>">
+<div class="card">
+  <div class="card__shine"></div>
+  <div class="card__glow"></div>
+  <div class="card__content">
+    <div class="card__badge">NEW</div>
+    <div  class="card__image"><img src="<%= listing.image %>" alt=""></div>
+    <div class="card__text">
+      <p class="card__title"><%= listing.title %></p>
+      <p class="card__description"><%= listing.description %></p>
+    </div>
+    <div class="card__footer">
+      <div class="card__price">&#8377;
+        <%= listing.price.toLocaleString("en-in") %>/night</div>
+      <div class="card__button">
+        <svg height="16" width="16" viewBox="0 0 24 24">
+          <path
+            stroke-width="2"
+            stroke="currentColor"
+            d="M4 12H20M12 4V20"
+            fill="currentColor"
+          ></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+</a>
+ <%   } %>
+</body>
+</html>
