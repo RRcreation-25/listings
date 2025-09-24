@@ -26,12 +26,10 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
-app.get("/", (req, res) => {
-  res.send("Hi, I am root");
-});
+
 
 //Index Route
-app.get("/listings", async (req, res) => {
+app.get("/", async (req, res) => {
   const allListings = await Listing.find({});
   res.render("listings/index2.ejs", { allListings });
 });
