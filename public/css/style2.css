@@ -3,6 +3,62 @@ body{
     flex-wrap: wrap;
 }
 
+
+.navbar{
+  display: flex;
+    height: 5rem;
+    width: 100%;
+    position: sticky !important;
+    z-index: 10;
+    top: 0;
+    background-color: aliceblue;
+}
+
+.fa-compass{ 
+    color: #fe424d;
+    font-size: 2rem;
+}
+.nav-link{
+    color: #222222 !important;
+}
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+.f-info-links, .f-info-socials,.f-info-brand{
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.f-info-socials i{ 
+     font-size:1.2rem ;
+     margin-right: 1rem;
+}
+
+
+.f-info-links a:hover{
+    text-decoration: underline;
+   
+}
+
+.f-info{
+    background-color: #ebebeb;
+    height: 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:space-evenly ;
+    text-align: center;
+}
+
+
+
+
+
+
+
 .outline {
   position: absolute;
   inset: 0;
@@ -304,3 +360,5 @@ object-fit: cover;
 a{
     text-decoration: none;
 }
+
+
